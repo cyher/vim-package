@@ -1062,6 +1062,8 @@ function! <SID>ToggleWindowsManager()
 		call s:CloseWindowsManager()
 	else
 		call s:StartWindowsManager()
+		exe '3wincmd w'
+		exe 'q'
 	end
 endfunction
 

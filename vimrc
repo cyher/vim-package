@@ -199,7 +199,8 @@ autocmd BufWinEnter \[Buf\ List\] setl nonumber
 
 "文件工程分栏
 "let g:winManagerWindowLayout='FileExplorer|TagList'
-let g:winManagerWindowLayout = 'FileExplorer|TagsList,BufExplorer'
+"let g:winManagerWindowLayout = 'FileExplorer|TagsList,BufExplorer'
+let g:winManagerWindowLayout = 'NERDTree|TagsList,BufExplorer'
 
 let g:winManagerWidth = 28
 let g:defaultExplorer = 1
