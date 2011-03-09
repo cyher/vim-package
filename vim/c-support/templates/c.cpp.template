@@ -105,10 +105,11 @@ class |CLASSNAME|
 
 		/* ====================  OPERATORS     ======================================= */
 
-		/* ====================  DATA MEMBERS  ======================================= */
 	protected:
+		/* ====================  DATA MEMBERS  ======================================= */
 
 	private:
+		/* ====================  DATA MEMBERS  ======================================= */
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
@@ -150,10 +151,11 @@ class |CLASSNAME|
 
     |CLASSNAME|& operator = ( const |CLASSNAME| &other ); /* assignment operator */
 
-		/* ====================  DATA MEMBERS  ======================================= */
   protected:
+		/* ====================  DATA MEMBERS  ======================================= */
 
   private:
+		/* ====================  DATA MEMBERS  ======================================= */
 
 }; /* -----  end of class |CLASSNAME|  ----- */
 
@@ -280,10 +282,11 @@ class |CLASSNAME|
 
 		/* ====================  OPERATORS     ======================================= */
 
-    /* ====================  DATA MEMBERS  ======================================= */
   protected:
+    /* ====================  DATA MEMBERS  ======================================= */
 
   private:
+    /* ====================  DATA MEMBERS  ======================================= */
 
 }; /* ----------  end of template class |CLASSNAME|  ---------- */
 
@@ -329,10 +332,11 @@ class |CLASSNAME|
 
     |CLASSNAME|& operator = ( const |CLASSNAME| &other ); // assignment operator
 
-    /* ====================  DATA MEMBERS  ======================================= */
   protected:
+    /* ====================  DATA MEMBERS  ======================================= */
 
   private:
+    /* ====================  DATA MEMBERS  ======================================= */
 
 }; /* -----  end of template class |CLASSNAME|  ----- */
 
@@ -416,7 +420,7 @@ try {
 <SPLIT>}
 catch ( const <CURSOR> &ExceptObj ) {		/* handle exception: */
 }
-catch (...) {		/* handle exception: unspezified */
+catch (...) {		/* handle exception: unspecified */
 }
 
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -463,6 +467,8 @@ using namespace |?NAMESPACE|;
 == cpp.namespace-block ==
 namespace |?NAMESPACE| {<CURSOR>
 <SPLIT>}		/* -----  end of namespace |NAMESPACE|  ----- */
+== cpp.namespace-alias ==
+namespace |?NAMESPACE_ALIAS|	= {-original namespace name-};
 $%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 == cpp.rtti-typeid == insert ==
 typeid(<CURSOR><SPLIT>)
