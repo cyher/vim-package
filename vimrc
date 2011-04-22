@@ -115,14 +115,9 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 "----------------------------------------------------------------------------
 "python 相关
 " python auto-complete code
-" Typing the following (in insert mode):
-"   os.lis<Ctrl-n>
-" will expand to:
-"   os.listdir(
-" Python 自动补全功能，只需要反覆按 Ctrl-N 就行了
- if has("autocmd") 
-       autocmd FileType python set complete+=k~/.vim/plugin/pydiction isk+=.,(
- endif " has("autocmd")
+
+let g:pydiction_location = '/home/ych116X/.vim/ftplugin/pydiction-1.2/complete-dict'
+let g:pydiction_menu_height = 20
 "----------------------------------------------------------------------------
 "----------------------------------------------------------------------------
 iab     #i          #include <<Esc>mxa><Esc>`xa<C-R>=Eatchar('\s')<CR>
