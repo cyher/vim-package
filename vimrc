@@ -45,12 +45,12 @@ set showcmd                 " 输入的命令显示出来，看的清楚些
 set updatetime=100         "更新文件内容时间
 set cmdheight=1 "The commandbar is 2 high
 
-set list
 
 "flag problematic whitespace (trailing and spaces before tabs)
 ""Note you get the same by doing let c_space_errors=1 but
 "this rule really applys to everything.
 "
+nmap  <silent> <F2>    :set list<CR>
 highlight RedundantSpaces term=standout ctermbg=red guibg=red
 match RedundantSpaces /\s\+$\| \+\ze\t/
 
@@ -116,14 +116,15 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 "python 相关
 " python auto-complete code
 
-let g:pydiction_location = '/home/ych116X/.vim/ftplugin/pydiction-1.2/complete-dict'
+let g:pydiction_location = '~/.vim/ftplugin/pydiction-1.2/complete-dict'
 let g:pydiction_menu_height = 20
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
 "----------------------------------------------------------------------------
 "----------------------------------------------------------------------------
 iab     #i          #include <<Esc>mxa><Esc>`xa<C-R>=Eatchar('\s')<CR>
 iab     #d          #define
 "----------------------------------------------------------------------------
-nmap  <silent> <F4>    :set fdm=syntax<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -171,7 +172,7 @@ let Tlist_Show_Menu=1
 "let Tlist_Process_File_Always=1
 
 "taglist窗口宽度
-let Tlist_WinWidth=30
+let Tlist_WinWidth=25
 
 "taglist窗口高度
 "let Tlist_WinHeight=25
@@ -190,7 +191,7 @@ let g:bufExplorerSplitVertical= 1    " Split vertically.
 let g:bufExplorerSplitVertSize = 10  " Split width
 let g:bufExplorerSplitBelow = 0      " Split below
 let g:bufExplorerUseCurrentWindow=1  " Open in new window.
-autocmd BufWinEnter \[Buf\ List\] setl nonumber 
+autocmd BufWinEnter \[Buf\ List\] setl nonumber
 
 "文件工程分栏
 "let g:winManagerWindowLayout='FileExplorer|TagList'
@@ -222,16 +223,17 @@ nmap ws     <C-w>s     " 水平分割当前窗口
 "-------------------------------------------------------------------------------
 "
 map   <silent> <F1>    :A<CR>
-map   <silent> <F2>    :write<CR>
+"map   <silent> <F2>    :write<CR>
 "map   <silent> <F3>    :Explore<CR>
 "nmap  <silent> <F4>    :exe ":ptag ".expand("<cword>")<CR>
+nmap  <silent> <F4>    :set fdm=syntax<CR>
 map   <silent> <F5>    :copen<CR>
 map   <silent> <F6>    :cclose<CR>
 map   <silent> <F7>    :cp<CR>
 map   <silent> <F8>    :cn<CR>
 "
 imap   <silent> <F1>    :A<CR>
-imap  <silent> <F2>    <Esc>:write<CR>
+"imap  <silent> <F2>    <Esc>:write<CR>
 "imap  <silent> <F3>    <Esc>:Explore<CR>
 imap  <silent> <F4>    <Esc>:exe ":ptag ".expand("<cword>")<CR>
 imap  <silent> <F5>    <Esc>:copen<CR>
